@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import Slidebar from '../components/Slidebar/Slidebar';
 import BarChart from '../components/BarChart/BarChart';
+import LineChart from '../components/LineChart/LineChart';
+import AreaChart from '../components/AreaChart/AreaChart';
+import ScatterChart from '../components/ScatterChart/ScatterChart';
+
+
 
 export const Home = () => {
   const [startDate, setStartDate] = useState('');
@@ -27,10 +32,9 @@ export const Home = () => {
       </div>
 
       
-      <div className="flex-1 p-6">
-        <div className="bg-white p-6 rounded-lg shadow-lg w-[40rem]">
-          <h2 className="text-2xl font-bold mb-4">Select Date Range</h2>
-          <form onSubmit={handleSubmit} className="flex gap-4 space-y-4 mb-6">
+      <div className=" p-6">
+      <h2 className="text-2xl font-bold mb-4">Select Date Range</h2>
+      <form onSubmit={handleSubmit} className="flex gap-4 space-y-4 mb-6">
             <div className="flex space-x-4">
               <div className="flex-1">
                 <label htmlFor="from" className="block text-sm font-medium text-gray-700">From:</label>
@@ -42,7 +46,7 @@ export const Home = () => {
                   onChange={handleStartDateChange}
                   className="mt-1 block w-full border px-4 py-2 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
-              </div>
+              </div> 
               <div className="flex-1">
                 <label htmlFor="to" className="block text-sm font-medium text-gray-700">To:</label>
                 <input
@@ -62,9 +66,19 @@ export const Home = () => {
               Submit
             </button>
           </form>
-
+        <div className="bg-white p-6 rounded-lg shadow-lg grid grid-cols-2 gap-4">
+         
           <div className="bg-white p-6">
             <BarChart />
+          </div>
+          <div className="bg-white p-6">
+            <LineChart />
+          </div>
+          <div className="bg-white p-6">
+            <AreaChart />
+          </div>
+          <div className="bg-white p-6">
+            <ScatterChart />
           </div>
         </div>
       </div>
