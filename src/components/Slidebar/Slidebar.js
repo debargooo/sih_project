@@ -44,7 +44,7 @@ const Slidebar = () => {
 
       <div className="fixed hidden md:flex flex-col top-0 left-0 w-[20%] bg-white h-full border-r shadow-lg">
         <div className="flex items-center justify-center h-16  text-black text-xl font-semibold shadow-md">
-          Sidebar Menu
+          Logo
         </div>
         <div className="overflow-y-auto flex-grow">
           <ul className="flex flex-col py-4 space-y-2">
@@ -136,9 +136,7 @@ const Slidebar = () => {
                 <span className="ml-4 text-lg tracking-wide truncate">
                   Temperature
                 </span>
-                <span className="px-2 py-1 ml-auto text-sm font-semibold tracking-wide text-indigo-500 bg-indigo-50 rounded-full">
-                  New
-                </span>
+               
               </Link>
             </li>
             <li>
