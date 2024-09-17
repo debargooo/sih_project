@@ -9,6 +9,8 @@ import { MdDataUsage } from "react-icons/md";
 const Slidebar = () => {
   const [menu, setMenu] = useState(false);
   const [menu2, setMenu2] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // State to toggle sidebar on mobile
+
 
   const handleMenu = () => {
     setMenu((prevState) => !prevState);
@@ -18,9 +20,26 @@ const Slidebar = () => {
     setMenu2((prevState) => !prevState);
   }
 
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen); // Toggle sidebar on mobile
+  };
+
+
   return (
-    <div className="min-h-screen flex flex-col bg-gray-100 text-gray-800">
-      <div className="fixed flex flex-col top-0 left-0 w-72 bg-white h-full border-r shadow-lg">
+    <div className="min-h-screen hidden lg:flex flex-col bg-gray-100 text-gray-800">
+      {/* Mobile burger menu button */}
+            <div className="lg:hidden flex items-center p-4 bg-white shadow-md">
+        <button
+          onClick={toggleSidebar}
+          className="text-xl text-gray-800 focus:outline-none"
+        >
+          ☰
+        </button>
+        <span className="ml-4 text-lg font-semibold">Sidebar Menu</span>
+      </div>
+
+
+      <div className="fixed hidden md:flex flex-col top-0 left-0 w-[20%] bg-white h-full border-r shadow-lg">
         <div className="flex items-center justify-center h-16  text-black text-xl font-semibold shadow-md">
           Sidebar Menu
         </div>
@@ -127,7 +146,7 @@ const Slidebar = () => {
                   type="button"
                   className="flex items-center gap-x-3 py-3 px-4 w-full text-lg font-medium bg-white text-left focus:outline-none hover:bg-indigo-50 text-gray-600 hover:text-indigo-700 border-l-4 border-transparent hover:border-indigo-500 shadow-sm"
                   aria-haspopup="menu"
-                  aria-expanded={menu ? "true" : "false"}
+                  aria-expanded={menu2 ? "true" : "false"}
                 >
                    <span className="inline-flex justify-center items-center text-xl">
                    <MdDataUsage />
@@ -135,7 +154,7 @@ const Slidebar = () => {
                   Usage
                   <svg
                     className={`w-5 h-5 ml-auto transition-transform duration-200 ${
-                      menu ? "rotate-180" : "rotate-0"
+                      menu2 ? "rotate-180" : "rotate-0"
                     }`}
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"

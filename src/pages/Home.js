@@ -27,14 +27,14 @@ export const Home = () => {
   return (
     <div className="flex w-screen h-screen overflow-x-hidden">
       
-      <div className="w-72 h-full">
+      <div className=" md:block md:w-[20%] lg:h-full">
         <Slidebar />
       </div>
 
       
-      <div className=" p-6">
+      <div className="p-2 md:p-6 w-full md:w-[80%]">
       <h2 className="text-2xl font-bold mb-4">Select Date Range</h2>
-      <form onSubmit={handleSubmit} className="flex gap-4 space-y-4 mb-6">
+      <form onSubmit={handleSubmit} className="flex flex-wrap md:gap-4 space-y-4 mb-6 m-2">
             <div className="flex space-x-4">
               <div className="flex-1">
                 <label htmlFor="from" className="block text-sm font-medium text-gray-700">From:</label>
@@ -44,7 +44,7 @@ export const Home = () => {
                   name="from"
                   value={startDate}
                   onChange={handleStartDateChange}
-                  className="mt-1 block w-full border px-4 py-2 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="mt-1 block w-full border px-2 md:px-4 py-2 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
               </div> 
               <div className="flex-1">
@@ -55,7 +55,7 @@ export const Home = () => {
                   name="to"
                   value={endDate}
                   onChange={handleEndDateChange}
-                  className="mt-1 block w-full border px-4 py-2 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="mt-1 block w-full border px-2 md:px-4 py-2 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
               </div>
             </div>
@@ -66,18 +66,22 @@ export const Home = () => {
               Submit
             </button>
           </form>
-        <div className="bg-white p-6 rounded-lg shadow-lg grid grid-cols-2 gap-4">
+        <div className="bg-white p-2 md:p-6  grid grid-cols-1 md:grid-cols-2 gap-4">
          
-          <div className="bg-white p-6">
+          <div className="bg-white p-2 md:p-6 text-center">
+            <p className='font-semibold text-xl mb-4'>Yearly</p>
             <BarChart />
           </div>
-          <div className="bg-white p-6">
+          <div className="bg-white p-2 md:p-6 text-center">
+          <p className='font-semibold text-xl mb-4'>Monthly</p>
             <LineChart />
           </div>
-          <div className="bg-white p-6">
+          <div className="bg-white p-2 md:p-6 text-center">
+          <p className='font-semibold text-xl mb-4'>Weekly</p>
             <AreaChart />
           </div>
-          <div className="bg-white p-6">
+          <div className="bg-white p-2 md:p-6 text-center">
+          <p className='font-semibold text-xl mb-4'>Daily</p>
             <ScatterChart />
           </div>
         </div>
