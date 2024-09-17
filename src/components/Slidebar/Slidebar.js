@@ -126,7 +126,7 @@ const Slidebar = () => {
             </li>
             {/* Other sidebar items */}
             <li>
-              <a
+              <Link to="/temperature"
                 href="#"
                 className="relative flex flex-row items-center h-12 focus:outline-none hover:bg-indigo-50 text-gray-600 hover:text-indigo-700 border-l-4 border-transparent hover:border-indigo-500 pr-6 shadow-sm"
               >
@@ -139,7 +139,7 @@ const Slidebar = () => {
                 <span className="px-2 py-1 ml-auto text-sm font-semibold tracking-wide text-indigo-500 bg-indigo-50 rounded-full">
                   New
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
               <a

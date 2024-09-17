@@ -24,7 +24,7 @@ const MapComponent = () => {
     const position = [28.6139, 77.2090]; // Latitude and Longitude of Delhi
 
     return (
-        <div className='h-screen w-screen p-9 flex justify-center items-center'>
+        <div className='h-screen w-screen p-9 flex justify-center items-center gap-8'>
             <MapContainer 
               center={position} 
               zoom={13} 

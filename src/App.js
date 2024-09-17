@@ -3,6 +3,7 @@ import Slidebar from "./components/Slidebar/Slidebar";
 import  {Home}  from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MapPage from "./pages/MapPage";
+import Temperature from "./pages/Temperature";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
      <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/map" element={<MapPage/>}/>
+      <Route path="/temperature" element={<Temperature/>}/>
      </Routes>
       
      </div>
