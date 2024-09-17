@@ -2,6 +2,7 @@ import MapComponent from "./components/Map/Map";
 import Slidebar from "./components/Slidebar/Slidebar";
 import  {Home}  from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MapPage from "./pages/MapPage";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       </div>
      <Routes>
       <Route path="/" element={<Home/>}/>
-      <Route path="/map" element={<MapComponent/>}/>
+      <Route path="/map" element={<MapPage/>}/>
      </Routes>
       
      </div>

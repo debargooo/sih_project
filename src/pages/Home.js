@@ -58,55 +58,41 @@ export const Home = () => {
             >
               Submit
             </button>
-          </form>
-        <div className="bg-white p-2 md:p-6  grid grid-cols-1 md:grid-cols-2 gap-4">
-         
-          <div className="bg-white p-2 md:p-6 text-center">
-            <div className='flex justify-center items-center gap-4 mb-4'>
-            <p className='font-semibold text-xl'>Yearly</p>
             <button
               type="submit"
               className="bg-blue-700 text-white hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
             >
               Download Report
             </button>
-            </div>
+          </form>
+        <div className="bg-white p-2 md:p-6  grid grid-cols-1 md:grid-cols-2 gap-4">
+         
+          <div className="bg-white p-2 md:p-6 text-center">
+           
+            <p className='font-semibold text-xl mb-2'>Yearly</p>
+           
+            
         
             <BarChart />
           </div>
           <div className="bg-white p-2 md:p-6 text-center">
           <div className='flex justify-center items-center gap-4 mb-4'>
             <p className='font-semibold text-xl'>Monthly</p>
-            <button
-              type="submit"
-              className="bg-blue-700 text-white hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-            >
-              Download Report
-            </button>
-            </div>
+            
+          </div>
             <AreaChart />
           </div>
           <div className="bg-white p-2 md:p-6 text-center">
           <div className='flex justify-center items-center gap-4 mb-4'>
             <p className='font-semibold text-xl'>Weekly</p>
-            <button
-              type="submit"
-              className="bg-blue-700 text-white hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-            >
-              Download Report
-            </button>
+            
             </div>
             <LineChart />
           </div>
           <div className="bg-white p-2 md:p-6 text-center">
           <div className='flex justify-center items-center gap-4 mb-4'>
             <p className='font-semibold text-xl'>Daily</p>
-            <button
-              type="submit"
-              className="bg-blue-700 text-white hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-            >
-              Download Report
-            </button>
+            
             </div>
             <ScatterChart />
           </div>
