@@ -5,6 +5,8 @@ import { FaRegSnowflake } from "react-icons/fa";
 import { LiaIndustrySolid } from "react-icons/lia";
 import { MdLocalGroceryStore } from "react-icons/md";
 import { MdDataUsage } from "react-icons/md";
+import { FaHome } from "react-icons/fa";
+import {Link} from "react-router-dom"
 
 const Slidebar = () => {
   const [menu, setMenu] = useState(false);
@@ -52,6 +54,19 @@ const Slidebar = () => {
                 </div>
               </div>
             </li>
+            <Link to="/">
+              <a
+                href="#"
+                className="relative flex flex-row items-center h-12 focus:outline-none hover:bg-indigo-50 text-gray-600 hover:text-indigo-700 border-l-4 border-transparent hover:border-indigo-500 pr-6 shadow-sm"
+              >
+                <span className="inline-flex justify-center items-center ml-4 text-xl">
+                <FaHome />
+                </span>
+                <span className="ml-4 text-lg tracking-wide truncate">
+                  Home
+                </span>
+              </a>
+            </Link>
             <li>
               <div className="relative">
                 <button
@@ -189,17 +204,17 @@ const Slidebar = () => {
               </div>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/map"
                 className="relative flex flex-row items-center h-12 focus:outline-none hover:bg-indigo-50 text-gray-600 hover:text-indigo-700 border-l-4 border-transparent hover:border-indigo-500 pr-6 shadow-sm"
               >
                 <span className="inline-flex justify-center items-center ml-4 text-2xl">
                   <MdLocalGroceryStore />
                 </span>
                 <span className="ml-4 text-lg tracking-wide truncate">
-                  Local
+                  Map
                 </span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -1,60 +1,27 @@
 import React, { PureComponent } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
+// Updated data with monthly electricity demand for different regions
 const data = [
-  {
-    name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: 'Page F',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: 'Page G',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
+  { month: 'Jan', Residential: 5000, Commercial: 3000, Industrial: 8000 },
+  { month: 'Feb', Residential: 5200, Commercial: 3100, Industrial: 8100 },
+  { month: 'Mar', Residential: 5500, Commercial: 3300, Industrial: 8500 },
+  { month: 'Apr', Residential: 5300, Commercial: 3200, Industrial: 8600 },
+  { month: 'May', Residential: 5600, Commercial: 3400, Industrial: 8700 },
+  { month: 'Jun', Residential: 5700, Commercial: 3500, Industrial: 8800 },
+  { month: 'Jul', Residential: 5900, Commercial: 3700, Industrial: 9000 },
+  { month: 'Aug', Residential: 6000, Commercial: 3800, Industrial: 9100 },
+  { month: 'Sep', Residential: 5800, Commercial: 3600, Industrial: 8900 },
+  { month: 'Oct', Residential: 5500, Commercial: 3400, Industrial: 8700 },
+  { month: 'Nov', Residential: 5300, Commercial: 3200, Industrial: 8500 },
+  { month: 'Dec', Residential: 5000, Commercial: 3000, Industrial: 8200 },
 ];
 
-export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/stacked-area-chart-forked-5yjhcs';
-
+export default class DemandProjectionChart extends PureComponent {
   render() {
     return (
       <ResponsiveContainer width="100%" height={400}>
         <AreaChart
-          width={500}
-          height={400}
           data={data}
           margin={{
             top: 10,
@@ -64,12 +31,12 @@ export default class Example extends PureComponent {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
+          <XAxis dataKey="month" />
           <YAxis />
           <Tooltip />
-          <Area type="monotone" dataKey="uv" stackId="1" stroke="#8884d8" fill="#8884d8" />
-          <Area type="monotone" dataKey="pv" stackId="1" stroke="#82ca9d" fill="#82ca9d" />
-          <Area type="monotone" dataKey="amt" stackId="1" stroke="#ffc658" fill="#ffc658" />
+          <Area type="monotone" dataKey="Residential" stackId="1" stroke="#8884d8" fill="#8884d8" />
+          <Area type="monotone" dataKey="Commercial" stackId="1" stroke="#82ca9d" fill="#82ca9d" />
+          <Area type="monotone" dataKey="Industrial" stackId="1" stroke="#ffc658" fill="#ffc658" />
         </AreaChart>
       </ResponsiveContainer>
     );

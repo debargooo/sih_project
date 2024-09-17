@@ -25,13 +25,6 @@ export const Home = () => {
   };
 
   return (
-    <div className="flex w-screen h-screen overflow-x-hidden">
-      
-      <div className=" md:block md:w-[20%] lg:h-full">
-        <Slidebar />
-      </div>
-
-      
       <div className="p-2 md:p-6 w-full md:w-[80%]">
       <h2 className="text-2xl font-bold mb-4">Select Date Range</h2>
       <form onSubmit={handleSubmit} className="flex flex-wrap md:gap-4 space-y-4 mb-6 m-2">
@@ -69,23 +62,56 @@ export const Home = () => {
         <div className="bg-white p-2 md:p-6  grid grid-cols-1 md:grid-cols-2 gap-4">
          
           <div className="bg-white p-2 md:p-6 text-center">
-            <p className='font-semibold text-xl mb-4'>Yearly</p>
+            <div className='flex justify-center items-center gap-4 mb-4'>
+            <p className='font-semibold text-xl'>Yearly</p>
+            <button
+              type="submit"
+              className="bg-blue-700 text-white hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            >
+              Download Report
+            </button>
+            </div>
+        
             <BarChart />
           </div>
           <div className="bg-white p-2 md:p-6 text-center">
-          <p className='font-semibold text-xl mb-4'>Monthly</p>
-            <LineChart />
-          </div>
-          <div className="bg-white p-2 md:p-6 text-center">
-          <p className='font-semibold text-xl mb-4'>Weekly</p>
+          <div className='flex justify-center items-center gap-4 mb-4'>
+            <p className='font-semibold text-xl'>Monthly</p>
+            <button
+              type="submit"
+              className="bg-blue-700 text-white hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            >
+              Download Report
+            </button>
+            </div>
             <AreaChart />
           </div>
           <div className="bg-white p-2 md:p-6 text-center">
-          <p className='font-semibold text-xl mb-4'>Daily</p>
+          <div className='flex justify-center items-center gap-4 mb-4'>
+            <p className='font-semibold text-xl'>Weekly</p>
+            <button
+              type="submit"
+              className="bg-blue-700 text-white hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            >
+              Download Report
+            </button>
+            </div>
+            <LineChart />
+          </div>
+          <div className="bg-white p-2 md:p-6 text-center">
+          <div className='flex justify-center items-center gap-4 mb-4'>
+            <p className='font-semibold text-xl'>Daily</p>
+            <button
+              type="submit"
+              className="bg-blue-700 text-white hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            >
+              Download Report
+            </button>
+            </div>
             <ScatterChart />
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
