@@ -100,7 +100,7 @@ export const Home = () => {
         <div className='w-full flex justify-center '>
 
         
-        <div className='h-52 w-96 rounded-md border-slate-950 border shadow-md text-slate-950 flex flex-col justify-center items-center p-5 mb-10 mr-32'>
+        <div className='h-52 w-[50rem] rounded-md border-slate-950 border shadow-md text-slate-950 flex flex-col justify-center items-center p-5 mb-10 mr-32'>
            <h1 className='font-bold text-2xl'>Compensation Methodology</h1>
            <p className='my-2'>1. In <span className='font-bold'>Nehru Place</span> if we install <b>100</b> solar panels then we can reduce the electricity peak consumption by 26%</p>
            <p>2. Using the <b>Solar panels </b> (if installed ) till 3 pm before the sun fully sets in summer can reduce the variability to 6 %</p>
