@@ -12,7 +12,6 @@ import {Link} from "react-router-dom"
 const Slidebar = () => {
   const [menu, setMenu] = useState(false);
   const [menu2, setMenu2] = useState(false);
-  const [isOpen, setIsOpen] = useState(false); // State to toggle sidebar on mobile
 
 
   const handleMenu = () => {
@@ -23,26 +22,11 @@ const Slidebar = () => {
     setMenu2((prevState) => !prevState);
   }
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen); // Toggle sidebar on mobile
-  };
 
 
   return (
-    <div className="min-h-screen hidden lg:flex flex-col bg-gray-100 text-gray-800">
-      {/* Mobile burger menu button */}
-            <div className="lg:hidden flex items-center p-4 bg-white shadow-md">
-        <button
-          onClick={toggleSidebar}
-          className="text-xl text-gray-800 focus:outline-none"
-        >
-          ☰
-        </button>
-        <span className="ml-4 text-lg font-semibold">Sidebar Menu</span>
-      </div>
-
-
-      <div className="fixed hidden md:flex flex-col top-0 left-0 w-[20%] bg-white h-full border-r shadow-lg">
+    <div className="w-screen md:min-h-screen lg:flex flex-col  text-gray-800">
+      <div className="md:fixed flex flex-col top-0 left-0 md:w-[20%] bg-white h-full border-r shadow-lg">
         <div className="flex items-center justify-center h-16  text-black text-xl font-semibold shadow-md">
           Logo
         </div>

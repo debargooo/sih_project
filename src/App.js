@@ -9,9 +9,9 @@ function App() {
   return (
     <>
      <BrowserRouter>
-     <div className="flex w-screen h-screen overflow-x-hidden">
+     <div className="flex flex-col md:flex-row gap-4 md:flex w-screen h-screen overflow-x-hidden">
 
-     <div className=" md:block md:w-[20%] lg:h-full">
+     <div className="w-screen md:w-[20%] lg:h-full">
         <Slidebar />
       </div>
      <Routes>

@@ -65,9 +65,9 @@ export const Home = () => {
               Download Report
             </button>
           </form>
-        <div className="bg-white p-2 md:p-6  grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className=" p-2 md:p-6  grid grid-cols-1 md:grid-cols-2 gap-4">
          
-          <div className="bg-white p-2 md:p-6 text-center">
+          <div className=" p-2 md:p-6 text-center">
            
             <p className='font-semibold text-xl mb-2'>Yearly</p>
            
@@ -75,21 +75,21 @@ export const Home = () => {
         
             <BarChart />
           </div>
-          <div className="bg-white p-2 md:p-6 text-center">
+          <div className=" p-2 md:p-6 text-center">
           <div className='flex justify-center items-center gap-4 mb-4'>
             <p className='font-semibold text-xl'>Monthly</p>
             
           </div>
             <AreaChart />
           </div>
-          <div className="bg-white p-2 md:p-6 text-center">
+          <div className=" p-2 md:p-6 text-center">
           <div className='flex justify-center items-center gap-4 mb-4'>
             <p className='font-semibold text-xl'>Weekly</p>
             
             </div>
             <LineChart />
           </div>
-          <div className="bg-white p-2 md:p-6 text-center">
+          <div className=" p-2 md:p-6 text-center">
           <div className='flex justify-center items-center gap-4 mb-4'>
             <p className='font-semibold text-xl'>Daily</p>
             
